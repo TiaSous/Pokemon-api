@@ -1,0 +1,18 @@
+FROM node:latest
+
+RUN apt-get update && \
+    apt-get install -y git
+
+RUN mkdir pokemon
+
+RUN git clone https://github.com/TiaSous/Pokemon-api.git ./pokemon
+
+WORKDIR ./pokemon/pokemon-api
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+
+
