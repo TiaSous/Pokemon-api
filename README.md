@@ -4,14 +4,16 @@ Le but avoir une api qui permet de recolter les informations sur les pokemons (e
 \
 Il y a également une partie docker qui permet d'instantanément d'avoir tout en place.
 \
+\
 Voici le git de la base de données : https://github.com/samchamper/pokemonDB
+
 ### Mettre en place localement
 Il vous faudra avoir une db MySQL prête. Dans le fichier sequelize.mjs (pokemon-api/src/db/), il vous faudra changer la partie suivante : 
-
+\
 ![image](https://github.com/TiaSous/Pokemon-api/assets/122774929/f90cd46a-63bb-40d8-b9d5-12e87c4d8b02)
 
 il faudra changer cette partie en fonction de où est votre db.
-
+\
 #### Execution
 Lorsque vous aurez finit, vous pourrez lancer l'api en faisant "npm start" dans un terminal.
 
