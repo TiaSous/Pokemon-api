@@ -3,6 +3,42 @@ import { success } from "./helper.mjs";
 import { Pokemon } from "../db/sequelize.mjs";
 import { Op } from "sequelize";
 
+/**
+* @swagger
+* /api/pokemon/:
+*   get:
+*     tags: [Products]
+*     summary: Reçoit tous les pokemon.
+*     description: Reçoit tous les pokemon. Peut être utiliser pour récolter des informations
+*     responses:
+*       200:
+*         description: Tous les pokemon.
+*         content:
+*           application/json:
+*             schema:
+*               type: object
+*               properties:
+*                 data:
+*                   type: object
+*                   properties:
+*                     pokemon_id:
+*                       type: integer
+*                       description: L'id pokemon.
+*                       example: 1
+*                     name:
+*                       type: string
+*                       description: Nom du pokemon.
+*                       example: Pikachu
+*                     type_1:
+*                       type: string
+*                       description: Type du pokemon.
+*                       example: fire
+*                     type_2:
+*                       type: string
+*                       description: 2ème type du pokemon.
+*                       example: fire
+*/
+
 const getPokemon = express();
 
 getPokemon.get("/", (req, res) => {
