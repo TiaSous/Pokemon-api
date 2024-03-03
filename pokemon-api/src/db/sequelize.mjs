@@ -7,7 +7,6 @@ const sequelize = new Sequelize(
   "root", // Mot de passe de l'utilisateur
   {
     host: "mysql",
-    port: 3066,
     dialect: "mysql",
     logging: false,
     define: {
